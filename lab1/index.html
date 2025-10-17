@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab1</title>
+
+    <style>
+        header {
+            font-family: fantasy;
+            color: blue;
+        }
+
+        header h1 {
+            font-size: 20px;
+        }
+
+        header h1::first-letter {
+            color: black;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .input-element {
+            margin-top: 20px;
+        }
+
+        .small {
+            font: 12px sans-serif;
+        }
+
+        .light-blue {
+            fill: rgba(0, 0, 255, 0.418);
+        }
+
+
+        div p {
+            color: blue;
+        }
+
+        #alert {
+            color: red;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <span>
+                <h1>Гребенюк Леонид Сергеевич, p3232, вариант 471855</h1>
+            </span>
+        </header>
+        
+        <div style="display: flex; flex-direction: column; align-items: center">
+            <div style="width: 400px; height: 400px;">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="200" r="75" class="light-blue" />
+                    <rect x="125" y="125" width="75" height="150" style="fill:white" />
+                    <rect x="200" y="200" width="75" height="75" style="fill:white" />
+                    <rect x="50" y="200" width="150" height="150" class="light-blue" />
+                    <polygon points="200,200 50,200 200,125" class="light-blue" />
+                    <line x1="200" y1="20" x2="200" y2="380" stroke="black" />
+                    <line x1="20" y1="200" x2="380" y2="200" stroke="black" />
+                    <line x1="370" y1="204" x2="380" y2="200" stroke="black" />
+                    <line x1="370" y1="196" x2="380" y2="200" stroke="black" />
+                    <line x1="204" y1="30" x2="200" y2="20" stroke="black" />
+                    <line x1="196" y1="30" x2="200" y2="20" stroke="black" />
+                    <line x1="197" y1="275" x2="203" y2="275" stroke="black" />
+                    <line x1="197" y1="350" x2="203" y2="350" stroke="black" />
+                    <line x1="197" y1="125" x2="203" y2="125" stroke="black" />
+                    <line x1="197" y1="50" x2="203" y2="50" stroke="black" />
+                    <line x1="50" y1="197" x2="50" y2="203" stroke="black" />
+                    <line x1="125" y1="197" x2="125" y2="203" stroke="black" />
+                    <line x1="275" y1="197" x2="275" y2="203" stroke="black" />
+                    <line x1="350" y1="197" x2="350" y2="203" stroke="black" />
+                    <text x="210" y="30" class="small">y</text>
+                    <text x="370" y="190" class="small">x</text>
+                    <text x="46" y="195" class="small">R</text>
+                    <text x="346" y="195" class="small">R</text>
+                    <text x="205" y="54" class="small">R</text>
+                    <text x="205" y="354" class="small">R</text>
+                    <text x="115" y="195" class="small">R/2</text>
+                    <text x="265" y="195" class="small">R/2</text>
+                    <text x="205" y="129" class="small">R/2</text>
+                    <text x="205" y="279" class="small">R/2</text>
+                </svg>
+            </div>
+
+            <div>
+                <fieldset style="width: fit-content;" class="input-element">
+                    <legend>Set X:</legend>
+                    <span>
+                        <input type="radio" name="x" value="-5" checked />
+                        <label for="huey">-5 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="-4" />
+                        <label for="dewey">-4 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="-3" />
+                        <label for="louie">-3 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="-2" />
+                        <label for="louie">-2 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="-1" />
+                        <label for="louie">-1 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="0" />
+                        <label for="louie">0 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="1" />
+                        <label for="louie">1 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="2" />
+                        <label for="louie">2 </label>
+                    </span>
+                    <span>
+                        <input type="radio" name="x" value="3" />
+                        <label for="louie">3</label>
+                    </span>
+                </fieldset>
+
+                <fieldset style="width: fit-content;" class="input-element">
+                    <legend>Type Y:</legend>
+                    <input type="text" size="10" maxlength="12" id="y" placeholder="-3 ≤ Y ≤ 5" required />
+                </fieldset>
+
+                <fieldset style="width: fit-content;" class="input-element">
+                    <legend>Set R:</legend>
+
+                    <span>
+                        <input type="checkbox" data-group="r" name="R1" value="1">
+                        <label>1 </label>
+                    </span>
+                    <span>
+                        <input type="checkbox" data-group="r" name="R2" value="2">
+                        <label for="louie">2 </label>
+                    </span>
+                    <span>
+                        <input type="checkbox" data-group="r" name="R3" value="3">
+                        <label for="louie">3 </label>
+                    </span>
+                    <span>
+                        <input type="checkbox" data-group="r" name="R4" value="4">
+                        <label for="louie">4 </label>
+                    </span>
+                    <span>
+                        <input type="checkbox" data-group="r" name="R5" value="5">
+                        <label for="louie">5 </label>
+                    </span>
+                </fieldset>
+            </div>
+
+            <div>
+                <p id="alert"></p>
+            </div>
+
+            <div>
+                <button onclick="getValues()">Send</button>
+            </div>
+
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Время запроса</th>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>R</th>
+                            <th>Статус</th>
+                            <th>Время обработки</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        const xHandler = document.querySelectorAll('input[name="x"]');
+        const yHandler = document.getElementById('y');
+        const rHandler = document.querySelectorAll('input[data-group="r"]');
+        const tableHandler = document.getElementById('table');
+        const alertHandler = document.getElementById('alert');
+
+        function addTableRow(requestTime, x, y, r, status, processingTime) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${requestTime}</td>
+                <td>${x}</td>
+                <td>${y}</td>
+                <td>${r}</td>
+                <td>${status}</td>
+                <td>${processingTime}</td>
+            `;
+            tableHandler.appendChild(row);
+        }
+
+        function getValues() {
+            let x, y, r;
+            for (let i of xHandler) {
+                if (i.checked) {
+                    x = Number(i.value);
+                    break;
+                }
+            }
+            if (x == null) {
+                alertHandler.textContent = "Установите X";
+                return;
+            }
+
+            if (yHandler.value == "") {
+                alertHandler.textContent = "Установите Y";
+                return;
+            }
+            y = Number(yHandler.value);
+            if (isNaN(y)) {
+                alertHandler.textContent = "Некорректное значение Y";
+                return;
+            }
+            if (y<-3 || y>5) {
+                alertHandler.textContent = "Некорректное значение Y";
+                return;
+            }
+
+            for (let i of rHandler) {
+                if (i.checked) {
+                    r = Number(i.value);
+                    break;
+                }
+            }
+            if (r == null) {
+                alertHandler.textContent = "Установите R";
+                return;
+            }
+
+            let ms = performance.now();
+            let time = new Date().toLocaleTimeString('ru-RU');
+            fetch('/api/main_deploy.jar/check', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    "x": x,
+                    "y": y,
+                    "r": r,
+                })
+            }).then(response => {
+            if (!response.ok) {
+                alertHandler.textContent = response.status;
+            }
+            response.json().then(data => {
+                addTableRow(time, x, y, r, data["status"], Math.round(performance.now() - ms));
+                alertHandler.textContent = "";
+            })   
+            })
+            .catch(error => {
+                alertHandler.textContent = error;
+            });
+        }
+
+    </script>
+</body>
+
+</html>
