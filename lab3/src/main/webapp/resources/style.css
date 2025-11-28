@@ -1,0 +1,44 @@
+header {
+    font-family: fantasy;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+.input-element {
+    margin-top: 20px;
+    width: fit-content;
+}
+
+.small {
+    font: 12px sans-serif;
+}
+
+p {
+    font: 16px sans-serif;
+}
+
+.light-blue {
+    fill: rgba(0, 0, 255, 0.418);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+fieldset button {
+    width: 30px;
+}
+
+circle[data-group="p"] {
+    stroke: black;
+    stroke-width: 1;
+}
