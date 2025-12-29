@@ -28,3 +28,5 @@ lab1/bazel-out
 lab1/bazel-lab1
 lab1/bazel-bin
 lab3/src/main/resources/database.properties
+lab4/back/src/main/resources/application.properties
+lab3/target/classes/database.properties
